@@ -1,0 +1,94 @@
+[package]
+name = "nexus-browser"
+version = "0.1.0"
+edition = "2021"
+authors = [
+    "Nexus Browser Contributors"
+]
+description = "A modular privacy-focused next-generation browser platform"
+license = "GPL-3.0"
+repository = "https://github.com/nexus-browser/nexus-browser"
+
+[workspace]
+members = [
+    "."
+]
+
+[dependencies]
+
+# Async runtime
+tokio = { version = "1.38", features = [
+    "full"
+] }
+
+# Serialization
+serde = { version = "1.0", features = [
+    "derive"
+] }
+
+serde_json = "1.0"
+
+toml = "0.8"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging
+log = "0.4"
+env_logger = "0.11"
+
+# Configuration
+config = "0.14"
+
+# File watching for hot-swappable engines
+notify = "6.1"
+
+# UUID generation
+uuid = { version = "1.10", features = [
+    "v4",
+    "serde"
+] }
+
+# Time management
+chrono = { version = "0.4", features = [
+    "serde"
+] }
+
+# Hashing/security
+sha2 = "0.10"
+ring = "0.17"
+
+# Async channels / messaging
+crossbeam-channel = "0.5"
+
+# System information
+sysinfo = "0.30"
+
+# WebAssembly runtime support
+wasmtime = "22.0"
+
+# CLI interface
+clap = { version = "4.5", features = [
+    "derive"
+] }
+
+# Platform abstraction
+[target.'cfg(unix)'.dependencies]
+nix = "0.29"
+
+[target.'cfg(windows)'.dependencies]
+windows = "0.58"
+
+[profile.release]
+
+# Security-focused release build
+
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+
+debug = true
