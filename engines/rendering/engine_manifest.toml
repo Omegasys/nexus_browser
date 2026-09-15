@@ -1,0 +1,39 @@
+# Nexus Browser Rendering Engine Registry
+# GPL-3.0 License
+
+[rendering]
+name = "Nexus Rendering Engine Collection"
+version = "0.1.0"
+default_engine = "blink"
+
+[engines.blink]
+name = "Blink"
+version = "embedded"
+path = "blink"
+manifest = "blink/manifest.toml"
+adapter = "blink/adapter.rs"
+launcher = "blink/process_launcher.rs"
+capabilities = "blink/capabilities.rs"
+build_config = "blink/build.json"
+
+[engines.blink.source]
+enabled = true
+source_directory = "blink/src"
+include_directory = "blink/include"
+
+[engines.blink.artifacts]
+development = "blink/build"
+production = "blink/artifacts"
+
+[engines.blink.security]
+sandbox_required = true
+microvm_required = true
+network_isolation = true
+filesystem_isolation = true
+gpu_isolation = true
+
+[engines.blink.hot_reload]
+enabled = true
+require_validation = true
+require_health_check = true
+automatic_rollback = true
