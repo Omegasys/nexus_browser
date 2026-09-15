@@ -1,0 +1,55 @@
+name = "nexus-firewall"
+
+display_name = "Nexus Firewall Engine"
+
+version = "0.1.0"
+
+engine_type = "security-network"
+
+
+description = """
+Policy based firewall and
+network enforcement layer.
+"""
+
+
+[features]
+
+packet_filtering = true
+
+ip_filtering = true
+
+port_filtering = true
+
+protocol_filtering = true
+
+domain_filtering = true
+
+application_filtering = true
+
+connection_tracking = true
+
+profiles = true
+
+kill_switch = true
+
+leak_prevention = true
+
+
+[integration]
+
+ipv4 = true
+
+ipv6 = true
+
+traffic_controller = true
+
+vpn = true
+
+tor = true
+
+proxy = true
+
+microvm = true
+
+sandbox = true
