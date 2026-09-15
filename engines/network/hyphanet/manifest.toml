@@ -1,0 +1,67 @@
+name = "nexus-hyphanet"
+
+display_name = "Nexus Hyphanet Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Independent Hyphanet decentralized
+storage and anonymous publishing engine
+for Nexus Browser.
+"""
+
+
+[features]
+
+distributed_storage = true
+
+anonymous_requests = true
+
+peer_networking = true
+
+private_publishing = true
+
+request_management = true
+
+identity_isolation = true
+
+network_lock = true
+
+hot_reload = true
+
+
+[security]
+
+content_verification = true
+
+sandbox_support = true
+
+microvm_support = true
+
+profile_isolation = true
+
+
+[integration]
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+ipfs = true
+
+freenet = true
+
+gnunet = true
+
+yggdrasil = true
+
+direct = true
