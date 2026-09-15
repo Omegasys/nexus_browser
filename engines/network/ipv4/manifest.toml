@@ -1,0 +1,54 @@
+name = "nexus-ipv4"
+
+display_name = "Nexus IPv4 Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Low-level IPv4 networking subsystem
+for Nexus Browser.
+"""
+
+
+[features]
+
+address_management = true
+
+interface_management = true
+
+routing = true
+
+packet_filtering = true
+
+connection_tracking = true
+
+leak_prevention = true
+
+hot_reload = true
+
+
+[security]
+
+vpn_support = true
+
+tor_support = true
+
+proxy_support = true
+
+microvm_support = true
+
+sandbox_support = true
+
+
+[integration]
+
+ipv6 = true
+
+dns = true
+
+firewall = true
+
+traffic_controller = true
