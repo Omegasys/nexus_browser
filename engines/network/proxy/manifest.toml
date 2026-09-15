@@ -1,0 +1,64 @@
+name = "nexus-proxy"
+
+display_name = "Nexus Proxy Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Generic proxy routing engine
+for Nexus Browser.
+"""
+
+
+[features]
+
+http_proxy = true
+
+https_proxy = true
+
+socks4 = true
+
+socks5 = true
+
+proxy_chaining = true
+
+pac_support = true
+
+authentication = true
+
+health_monitoring = true
+
+failover = true
+
+leak_prevention = true
+
+
+[security]
+
+sandbox_support = true
+
+microvm_support = true
+
+traffic_controller = true
+
+
+[integration]
+
+ipv4 = true
+
+ipv6 = true
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+direct = true
