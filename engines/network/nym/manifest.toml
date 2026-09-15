@@ -1,0 +1,52 @@
+name = "nexus-nym"
+
+display_name = "Nexus Nym Mixnet Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Independent Nym mixnet networking
+subsystem for Nexus Browser.
+"""
+
+
+[features]
+
+mixnet_routing = true
+
+gateway_management = true
+
+metadata_protection = true
+
+network_lock = true
+
+hot_reload = true
+
+
+[security]
+
+traffic_leak_prevention = true
+
+process_isolation = true
+
+microvm_support = true
+
+dns_isolation = true
+
+identity_separation = true
+
+
+[integration]
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+lokinet = true
+
+direct = true
