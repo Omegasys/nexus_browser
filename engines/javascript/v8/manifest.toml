@@ -1,0 +1,81 @@
+name = "v8"
+display_name = "V8 JavaScript Engine"
+version = "12.0.0"
+engine_type = "javascript"
+language = "C++"
+standard = "C++20"
+
+description = "V8 JavaScript runtime adapter for Nexus Browser."
+
+[build]
+system = "gn-ninja"
+incremental = true
+parallel = true
+optimization = true
+debug_symbols = true
+
+[build.targets]
+development = true
+release = true
+wasm = true
+shared_library = true
+static_library = true
+
+[platforms]
+linux_x86_64 = true
+linux_aarch64 = true
+windows_x86_64 = true
+windows_arm64 = true
+macos_x86_64 = true
+macos_arm64 = true
+
+[features]
+ecmascript = true
+javascript_modules = true
+wasm = true
+workers = true
+shared_array_buffer = true
+bigint = true
+jit = true
+sandboxing = true
+microvm = true
+hot_reload = true
+rollback = true
+
+[security]
+process_isolation = true
+site_isolation = true
+capability_restriction = true
+filesystem_restriction = true
+network_policy = true
+microvm_isolation = true
+jit_control = true
+memory_limits = true
+
+[permissions]
+filesystem = "restricted"
+network = "restricted"
+process_creation = false
+device_access = false
+clipboard = "brokered"
+system_api = "brokered"
+
+[runtime]
+sandbox = true
+microvm = true
+hot_reload = true
+rollback = true
+health_monitoring = true
+crash_recovery = true
+
+[limits]
+default_heap_mb = 256
+maximum_heap_mb = 1024
+default_memory_mb = 512
+maximum_memory_mb = 2048
+
+[adapter]
+language = "rust"
+interface = "JsEngine"
+process_boundary = true
+ipc = true
