@@ -1,0 +1,67 @@
+{
+    "project": "nexus_blink",
+    "version": "0.1.0",
+
+    "language": "C++",
+    "standard": "C++20",
+
+    "build_system": "CMake",
+    "minimum_cmake_version": "3.20",
+
+    "build_type": "Release",
+
+    "targets": [
+        "Linux",
+        "Windows",
+        "macOS"
+    ],
+
+    "output": {
+        "type": "shared_library",
+        "name": "nexus_blink"
+    },
+
+    "compiler": {
+        "incremental": true,
+        "parallel": true,
+        "warnings": "high",
+        "position_independent_code": true
+    },
+
+    "optimization": {
+        "debug": "-O0",
+        "release": "-O2",
+        "relwithdebinfo": "-O2"
+    },
+
+    "security": {
+        "sandbox_required": true,
+        "microvm_compatible": true,
+        "network_access_default": false,
+        "filesystem_access_default": false,
+        "javascript_sandbox_required": true
+    },
+
+    "integration": {
+        "rust_ffi": true,
+        "nexus_bridge": true,
+        "capability_system": true,
+        "hot_reload": true,
+        "rollback": true
+    },
+
+    "source_directories": [
+        "../src",
+        "../include"
+    ],
+
+    "artifact_directory": "../../../../../artifacts/blink",
+
+    "development": {
+        "source_watcher": true,
+        "automatic_rebuild": true,
+        "automatic_validation": true,
+        "automatic_testing": true,
+        "automatic_hot_reload": true
+    }
+}
