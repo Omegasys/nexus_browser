@@ -1,0 +1,60 @@
+name = "nexus-gnunet"
+
+display_name = "Nexus GNUnet Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Independent GNUnet decentralized
+peer networking subsystem for Nexus Browser.
+"""
+
+
+[features]
+
+peer_networking = true
+
+service_management = true
+
+distributed_storage = true
+
+routing = true
+
+identity_management = true
+
+network_lock = true
+
+hot_reload = true
+
+
+[security]
+
+peer_isolation = true
+
+identity_separation = true
+
+sandbox_support = true
+
+microvm_support = true
+
+
+[integration]
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+ipfs = true
+
+freenet = true
+
+direct = true
