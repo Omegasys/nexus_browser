@@ -1,0 +1,61 @@
+name = "nexus-yggdrasil"
+
+display_name = "Nexus Yggdrasil Mesh Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Independent Yggdrasil encrypted
+IPv6 mesh networking subsystem
+for Nexus Browser.
+"""
+
+
+[features]
+
+ipv6_mesh = true
+
+peer_routing = true
+
+identity_management = true
+
+encrypted_transport = true
+
+network_lock = true
+
+hot_reload = true
+
+
+[security]
+
+encrypted_links = true
+
+identity_isolation = true
+
+sandbox_support = true
+
+microvm_support = true
+
+
+[integration]
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+ipfs = true
+
+freenet = true
+
+gnunet = true
+
+direct = true
