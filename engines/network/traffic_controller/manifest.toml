@@ -1,0 +1,69 @@
+name = "nexus-traffic-controller"
+
+display_name = "Nexus Traffic Controller"
+
+version = "0.1.0"
+
+engine_type = "network-control"
+
+
+description = """
+Central traffic routing,
+policy enforcement,
+and privacy control layer.
+"""
+
+
+[features]
+
+routing_control = true
+
+profile_management = true
+
+protocol_filtering = true
+
+firewall_control = true
+
+leak_prevention = true
+
+kill_switch = true
+
+traffic_monitoring = true
+
+
+[network_support]
+
+ipv4 = true
+
+ipv6 = true
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+ipfs = true
+
+freenet = true
+
+gnunet = true
+
+yggdrasil = true
+
+hyphanet = true
+
+direct = true
+
+
+[security]
+
+microvm_support = true
+
+sandbox_support = true
+
+identity_isolation = true
