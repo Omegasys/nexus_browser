@@ -1,0 +1,14 @@
+set(CMAKE_SYSTEM_NAME Windows)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+if(MSVC)
+    set(CMAKE_CXX_FLAGS
+        "${CMAKE_CXX_FLAGS} /W4 /permissive-"
+    )
+endif()
+
+set(CMAKE_BUILD_TYPE Release)
