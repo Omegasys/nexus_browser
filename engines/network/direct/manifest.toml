@@ -1,0 +1,70 @@
+name = "nexus-direct-network"
+
+display_name = "Nexus Direct Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Standard direct internet connectivity
+engine for Nexus Browser.
+"""
+
+
+[features]
+
+tcp_support = true
+
+udp_support = true
+
+http_support = true
+
+https_support = true
+
+socket_management = true
+
+interface_selection = true
+
+routing = true
+
+policy_control = true
+
+leak_prevention = true
+
+
+[security]
+
+sandbox_support = true
+
+microvm_support = true
+
+traffic_controller = true
+
+
+[integration]
+
+ipv4 = true
+
+ipv6 = true
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+yggdrasil = true
+
+ipfs = true
+
+freenet = true
+
+gnunet = true
+
+hyphanet = true
