@@ -1,0 +1,83 @@
+name = "servo"
+display_name = "Nexus Servo Rendering Engine"
+version = "0.1.0"
+
+engine_type = "rendering"
+language = "rust"
+standard = "rust-2021"
+
+description = "Servo rendering backend for Nexus Browser."
+
+entry_point = "nexus_servo"
+
+library_type = "rust_library"
+
+supported_platforms = [
+    "linux-x86_64",
+    "linux-aarch64",
+    "windows-x86_64",
+    "windows-arm64",
+    "macos-x86_64",
+    "macos-arm64"
+]
+
+supported_formats = [
+    "shared_library",
+    "wasm"
+]
+
+features = [
+    "html",
+    "css",
+    "javascript",
+    "dom",
+    "frames",
+    "private_mode",
+    "sandboxing",
+    "microvm",
+    "wasm",
+    "hot_reload",
+    "rollback"
+]
+
+security = [
+    "process_isolation",
+    "site_isolation",
+    "capability_restriction",
+    "network_policy",
+    "filesystem_restriction",
+    "microvm_isolation"
+]
+
+[trust]
+initial = "untrusted"
+requires_validation = true
+requires_testing = true
+requires_health_check = true
+requires_integrity_check = true
+
+[runtime]
+hot_reload = true
+rollback = true
+health_monitoring = true
+sandbox_required = true
+
+[build]
+system = "cargo"
+source_directory = "src"
+include_directory = "include"
+artifact_directory = "artifacts"
+
+[wasm]
+enabled = true
+bridge = true
+sandboxed = true
+
+[configuration]
+javascript_enabled = true
+images_enabled = true
+plugins_enabled = false
+webgl_enabled = false
+private_mode = true
+network_access = false
+filesystem_access = false
