@@ -1,0 +1,73 @@
+name = "spidermonkey"
+
+display_name = "Mozilla SpiderMonkey"
+
+version = "128.0"
+
+engine_type = "javascript"
+
+language = "C++"
+
+standard = "C++17"
+
+
+description = """
+SpiderMonkey JavaScript engine adapter
+for Nexus Browser.
+"""
+
+
+[build]
+
+system = "mozbuild"
+
+incremental = true
+
+parallel = true
+
+
+[features]
+
+ecmascript = true
+
+wasm = true
+
+modules = true
+
+workers = true
+
+jit = true
+
+garbage_collection = true
+
+sandboxing = true
+
+microvm = true
+
+hot_reload = true
+
+
+
+[security]
+
+process_isolation = true
+
+filesystem_restriction = true
+
+network_restriction = true
+
+memory_limits = true
+
+capability_model = true
+
+
+
+[runtime]
+
+sandbox = true
+
+microvm = true
+
+rollback = true
+
+health_monitoring = true
