@@ -1,0 +1,60 @@
+# Nexus Browser Blink Engine Manifest
+# GPL-3.0 License
+
+[engine]
+id = "blink"
+name = "Blink"
+version = "embedded"
+type = "rendering"
+status = "experimental"
+
+[engine.nexus]
+api_version = "0.1"
+adapter = "adapter.rs"
+process_launcher = "process_launcher.rs"
+capabilities = "capabilities.rs"
+
+[source]
+enabled = true
+directory = "src"
+include_directory = "include"
+
+[build]
+configuration = "build.json"
+output_directory = "build"
+artifact_directory = "artifacts"
+
+[build.targets]
+linux = true
+windows = true
+macos = true
+
+[security]
+sandbox = true
+microvm = true
+network_isolation = true
+filesystem_isolation = true
+gpu_isolation = true
+
+[privacy]
+shared_state = false
+cross_tab_state = false
+cross_workspace_state = false
+
+[hot_reload]
+enabled = true
+validate_before_load = true
+health_check_before_activation = true
+rollback_on_failure = true
+
+[capabilities]
+html = true
+css = true
+javascript = true
+webassembly = true
+webgl = true
+webgpu = true
+web_audio = true
+webrtc = true
+service_workers = true
+indexeddb = true
