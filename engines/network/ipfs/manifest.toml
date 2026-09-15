@@ -1,0 +1,54 @@
+name = "nexus-ipfs"
+
+display_name = "Nexus IPFS Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Independent IPFS decentralized content
+networking subsystem for Nexus Browser.
+"""
+
+
+[features]
+
+peer_discovery = true
+
+content_addressing = true
+
+gateway_support = true
+
+pin_management = true
+
+distributed_cache = true
+
+hot_reload = true
+
+
+[security]
+
+content_verification = true
+
+sandbox_support = true
+
+microvm_support = true
+
+network_lock = true
+
+
+[integration]
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+direct = true
