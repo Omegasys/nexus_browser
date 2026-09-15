@@ -1,0 +1,59 @@
+name = "nexus-freenet"
+
+display_name = "Nexus Freenet Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Independent Freenet decentralized
+storage and publishing subsystem
+for Nexus Browser.
+"""
+
+
+[features]
+
+distributed_storage = true
+
+peer_networking = true
+
+private_publishing = true
+
+request_management = true
+
+identity_management = true
+
+network_lock = true
+
+hot_reload = true
+
+
+[security]
+
+content_verification = true
+
+sandbox_support = true
+
+microvm_support = true
+
+identity_isolation = true
+
+
+[integration]
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+ipfs = true
+
+direct = true
