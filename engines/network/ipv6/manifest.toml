@@ -1,0 +1,56 @@
+name = "nexus-ipv6"
+
+display_name = "Nexus IPv6 Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+Low-level IPv6 networking subsystem
+for Nexus Browser.
+"""
+
+
+[features]
+
+address_management = true
+
+interface_management = true
+
+routing = true
+
+neighbor_discovery = true
+
+packet_filtering = true
+
+privacy_addresses = true
+
+connection_tracking = true
+
+leak_prevention = true
+
+
+[security]
+
+vpn_support = true
+
+tor_support = true
+
+microvm_support = true
+
+sandbox_support = true
+
+
+[integration]
+
+ipv4 = true
+
+yggdrasil = true
+
+dns = true
+
+firewall = true
+
+traffic_controller = true
