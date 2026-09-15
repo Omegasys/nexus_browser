@@ -1,0 +1,66 @@
+name = "javascriptcore"
+
+display_name = "Apple JavaScriptCore"
+
+version = "WebKit"
+
+engine_type = "javascript"
+
+language = "C++"
+
+
+
+description = """
+JavaScriptCore adapter for Nexus Browser.
+"""
+
+
+[build]
+
+system = "cmake"
+
+incremental = true
+
+parallel = true
+
+
+
+[features]
+
+ecmascript = true
+
+wasm = true
+
+modules = true
+
+jit = true
+
+garbage_collection = true
+
+sandboxing = true
+
+hot_reload = true
+
+
+
+[security]
+
+process_isolation = true
+
+filesystem_restriction = true
+
+network_policy = true
+
+memory_limits = true
+
+
+
+[runtime]
+
+sandbox = true
+
+microvm = true
+
+health_monitoring = true
+
+rollback = true
