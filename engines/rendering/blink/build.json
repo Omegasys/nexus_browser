@@ -1,0 +1,51 @@
+{
+  "name": "blink",
+  "version": "0.1.0",
+  "engine_type": "rendering",
+
+  "source": {
+    "directory": "src",
+    "include_directory": "include"
+  },
+
+  "build": {
+    "system": "nexus",
+    "language": "c++",
+    "standard": "c++20",
+    "incremental": true,
+    "parallel": true
+  },
+
+  "targets": {
+    "linux": true,
+    "windows": true,
+    "macos": true
+  },
+
+  "output": {
+    "directory": "build",
+    "artifact_directory": "artifacts"
+  },
+
+  "artifacts": {
+    "wasm": true,
+    "shared_library": true,
+    "static_library": false
+  },
+
+  "security": {
+    "sandbox": true,
+    "microvm": true,
+    "network_isolation": true,
+    "filesystem_isolation": true,
+    "gpu_isolation": true
+  },
+
+  "hot_reload": {
+    "enabled": true,
+    "compile_on_change": true,
+    "validate_before_reload": true,
+    "health_check_before_reload": true,
+    "automatic_rollback": true
+  }
+}
