@@ -1,0 +1,64 @@
+name = "nexus-vpn"
+
+display_name = "Nexus VPN Network Engine"
+
+version = "0.1.0"
+
+engine_type = "network"
+
+
+description = """
+VPN routing subsystem for Nexus Browser.
+
+Supports independent VPN operation,
+encrypted tunnels, provider profiles,
+and network kill switch protection.
+"""
+
+
+[protocols]
+
+wireguard = true
+
+openvpn = true
+
+ikev2 = true
+
+
+[features]
+
+multi_profile = true
+
+hot_reload = true
+
+kill_switch = true
+
+network_isolation = true
+
+microvm_support = true
+
+
+[security]
+
+encrypted_tunnels = true
+
+traffic_leak_prevention = true
+
+dns_protection = true
+
+ipv4_support = true
+
+ipv6_support = true
+
+
+[integration]
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+direct_connection = true
