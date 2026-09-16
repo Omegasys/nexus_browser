@@ -1,0 +1,81 @@
+name = "nexus-dns"
+version = "0.1.0"
+type = "network-service"
+description = "Modular privacy-preserving DNS subsystem for Nexus Browser"
+
+[engine]
+entry = "dns_engine.rs"
+language = "rust"
+sandbox = true
+microvm = true
+hot_reload = true
+
+[features]
+resolver = true
+resolver_manager = true
+doh = true
+dot = true
+dnscrypt = true
+dnssec = true
+cache = true
+partitioning = true
+leak_protection = true
+kill_switch = true
+
+[protocols]
+system = true
+plain_dns = true
+doh = true
+dot = true
+dnscrypt = true
+tor_dns = true
+
+[dnssec]
+enabled = true
+required = true
+
+[privacy]
+block_plain_dns = true
+block_system_resolver = true
+enforce_selected_resolver = true
+partition_cache = true
+clear_cache_on_profile_destroy = true
+clear_cache_on_disposable_destroy = true
+
+[security]
+sandbox = true
+microvm = true
+leak_protection = true
+kill_switch = true
+certificate_validation = true
+hostname_verification = true
+
+[network]
+ipv4 = true
+ipv6 = true
+tcp = true
+udp = true
+quic = true
+
+[integration]
+traffic_controller = true
+protocol_filter = true
+firewall = true
+network_lock = true
+network_isolation = true
+microvm = true
+
+[routing]
+direct = true
+vpn = true
+tor = true
+i2p = true
+nym = true
+lokinet = true
+
+[policy]
+default_resolver = "doh"
+allow_plain_dns = false
+allow_system_resolver = false
+fallback_to_system = false
+fail_closed = true
