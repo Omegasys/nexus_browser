@@ -1,0 +1,130 @@
+name = "nexus-protocol-filter"
+
+display_name = "Nexus Protocol Filter"
+
+version = "0.1.0"
+
+engine_type = "network-policy"
+
+
+description = """
+Protocol classification and enforcement
+layer for Nexus Browser.
+"""
+
+
+[features]
+
+protocol_classification = true
+
+protocol_registry = true
+
+protocol_rules = true
+
+transport_filtering = true
+
+application_protocols = true
+
+ip_protocols = true
+
+port_filtering = true
+
+dns_protocols = true
+
+web_protocols = true
+
+realtime_protocols = true
+
+protocol_detection = true
+
+protocol_logging = true
+
+protocol_lock = true
+
+
+[transport]
+
+tcp = true
+
+udp = true
+
+quic = true
+
+
+[ip]
+
+ipv4 = true
+
+ipv6 = true
+
+icmp = true
+
+icmpv6 = true
+
+
+[application]
+
+http = true
+
+https = true
+
+tls = true
+
+ssh = true
+
+ftp = true
+
+sftp = true
+
+websocket = true
+
+
+[dns]
+
+system = true
+
+plain_dns = false
+
+doh = true
+
+dot = true
+
+dnscrypt = true
+
+tor_dns = true
+
+
+[realtime]
+
+webrtc = true
+
+stun = true
+
+turn = true
+
+
+[integration]
+
+traffic_controller = true
+
+firewall = true
+
+direct = true
+
+proxy = true
+
+vpn = true
+
+tor = true
+
+i2p = true
+
+nym = true
+
+lokinet = true
+
+ipv4 = true
+
+ipv6 = true
+
+microvm = true
