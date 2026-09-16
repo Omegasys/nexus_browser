@@ -1,0 +1,70 @@
+name = "nexus-torrent"
+version = "0.1.0"
+type = "network-application"
+description = "Modular BitTorrent subsystem for Nexus Browser"
+
+[engine]
+entry = "torrent_engine.rs"
+language = "rust"
+sandbox = true
+microvm = true
+hot_reload = true
+
+[features]
+torrent_client = true
+magnet_links = true
+trackers = true
+dht = true
+peer_management = true
+piece_management = true
+metadata = true
+bittorrent_protocol = true
+security_controls = true
+network_isolation = true
+
+[protocol]
+bittorrent = true
+magnet = true
+http_trackers = true
+https_trackers = true
+udp_trackers = true
+dht = true
+
+[network]
+direct = true
+proxy = true
+vpn = true
+tor = false
+i2p = true
+nym = true
+lokinet = true
+
+[security]
+sandbox = true
+network_isolation = true
+leak_protection = true
+private_address_filtering = false
+inbound_connection_control = true
+fallback_disabled_by_default = true
+
+[storage]
+temporary = true
+persistent = true
+encrypted = true
+disposable = true
+
+[integration]
+traffic_controller = true
+protocol_filter = true
+firewall = true
+ipv4 = true
+ipv6 = true
+dns_manager = true
+network_lock = true
+microvm = true
+
+[policy]
+default_network = "vpn"
+allow_direct = false
+allow_tor = false
+allow_unisolated_fallback = false
