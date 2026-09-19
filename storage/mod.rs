@@ -1,4 +1,16 @@
+pub mod cache_manager;
+pub mod cache_storage;
+pub mod cookie_deletion;
 pub mod cookie_manager;
+pub mod cookie_policy;
+pub mod indexeddb;
+pub mod local_storage;
+pub mod service_workers;
+pub mod session_storage;
+pub mod shared_workers;
+pub mod site_data_manager;
+pub mod broadcast_channel;
+pub mod storage_partitioning;pub mod cookie_manager;
 pub mod cookie_policy;
 pub mod cookie_deletion;
 pub mod site_data_manager;
