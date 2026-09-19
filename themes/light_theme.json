@@ -1,0 +1,54 @@
+{
+  "id": "nexus-light",
+  "name": "Nexus Light",
+  "version": "1.0.0",
+  "appearance": "light",
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F6F8FA",
+    "surface_alt": "#EAEFF2",
+    "foreground": "#1F2328",
+    "foreground_muted": "#656D76",
+    "accent": "#0969DA",
+    "accent_hover": "#0550AE",
+    "accent_active": "#0A5CC2",
+    "border": "#D0D7DE",
+    "divider": "#D8DEE4",
+    "selection": "#B6D7FF",
+    "focus": "#0969DA",
+    "success": "#1A7F37",
+    "warning": "#9A6700",
+    "error": "#CF222E",
+    "info": "#0969DA"
+  },
+  "browser": {
+    "toolbar_background": "#F6F8FA",
+    "toolbar_foreground": "#1F2328",
+    "tab_background": "#F6F8FA",
+    "tab_active_background": "#FFFFFF",
+    "tab_active_foreground": "#1F2328",
+    "tab_inactive_foreground": "#656D76",
+    "address_bar_background": "#FFFFFF",
+    "address_bar_foreground": "#1F2328",
+    "bookmark_background": "#F6F8FA"
+  },
+  "workspace": {
+    "background": "#FFFFFF",
+    "active_indicator": "#0969DA",
+    "inactive_indicator": "#D0D7DE",
+    "group_background": "#F6F8FA",
+    "group_active_background": "#EAEFF2"
+  },
+  "privacy": {
+    "protected": "#1A7F37",
+    "warning": "#9A6700",
+    "blocked": "#CF222E",
+    "isolated": "#0969DA"
+  },
+  "terminal": {
+    "background": "#FFFFFF",
+    "foreground": "#1F2328",
+    "cursor": "#1F2328",
+    "selection": "#B6D7FF"
+  }
+}
