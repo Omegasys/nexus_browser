@@ -1,0 +1,54 @@
+{
+  "id": "nexus-high-contrast",
+  "name": "Nexus High Contrast",
+  "version": "1.0.0",
+  "appearance": "high-contrast",
+  "colors": {
+    "background": "#000000",
+    "surface": "#000000",
+    "surface_alt": "#1A1A1A",
+    "foreground": "#FFFFFF",
+    "foreground_muted": "#E0E0E0",
+    "accent": "#00FFFF",
+    "accent_hover": "#66FFFF",
+    "accent_active": "#00CCCC",
+    "border": "#FFFFFF",
+    "divider": "#808080",
+    "selection": "#0000FF",
+    "focus": "#FFFF00",
+    "success": "#00FF00",
+    "warning": "#FFFF00",
+    "error": "#FF0000",
+    "info": "#00FFFF"
+  },
+  "browser": {
+    "toolbar_background": "#000000",
+    "toolbar_foreground": "#FFFFFF",
+    "tab_background": "#000000",
+    "tab_active_background": "#1A1A1A",
+    "tab_active_foreground": "#FFFFFF",
+    "tab_inactive_foreground": "#E0E0E0",
+    "address_bar_background": "#000000",
+    "address_bar_foreground": "#FFFFFF",
+    "bookmark_background": "#000000"
+  },
+  "workspace": {
+    "background": "#000000",
+    "active_indicator": "#FFFF00",
+    "inactive_indicator": "#808080",
+    "group_background": "#1A1A1A",
+    "group_active_background": "#333333"
+  },
+  "privacy": {
+    "protected": "#00FF00",
+    "warning": "#FFFF00",
+    "blocked": "#FF0000",
+    "isolated": "#00FFFF"
+  },
+  "terminal": {
+    "background": "#000000",
+    "foreground": "#FFFFFF",
+    "cursor": "#FFFFFF",
+    "selection": "#0000FF"
+  }
+}
