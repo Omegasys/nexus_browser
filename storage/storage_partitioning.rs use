@@ -1,0 +1,218 @@
+use std::collections::HashMap;
+use std::fmt;
+
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
+pub struct StoragePartitionKey {
+    pub top_level_site: String,
+    pub origin: String,
+    pub network_context: String,
+}
+
+impl StoragePartitionKey {
+    pub fn new(
+        top_level_site: impl Into<String>,
+        origin: impl Into<String>,
+        network_context: impl Into<String>,
+    ) -> Self {
+        Self {
+            top_level_site: top_level_site.into(),
+            origin: origin.into(),
+            network_context: network_context.into(),
+        }
+    }
+
+    pub fn first_party(origin: impl Into<String>) -> Self {
+        let origin = origin.into();
+
+        Self {
+            top_level_site: origin.clone(),
+            origin,
+            network_context: "default".to_string(),
+        }
+    }
+}
+
+impl fmt::Display for StoragePartitionKey {
+    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(
+            formatter,
+            "{}|{}|{}",
+            self.top_level_site,
+            self.origin,
+            self.network_context
+        )
+    }
+}
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum PartitionMode {
+    Disabled,
+    PerOrigin,
+    TopLevelSite,
+    Strict,
+}
+
+#[derive(Debug, Clone)]
+pub struct StoragePartitionPolicy {
+    pub mode: PartitionMode,
+    pub isolate_third_party: bool,
+    pub isolate_network_contexts: bool,
+    pub prevent_cross_site_access: bool,
+}
+
+impl Default for StoragePartitionPolicy {
+    fn default() -> Self {
+        Self {
+            mode: PartitionMode::Strict,
+            isolate_third_party: true,
+            isolate_network_contexts: true,
+            prevent_cross_site_access: true,
+        }
+    }
+}
+
+impl StoragePartitionPolicy {
+    pub fn permissive() -> Self {
+        Self {
+            mode: PartitionMode::PerOrigin,
+            isolate_third_party: false,
+            isolate_network_contexts: false,
+            prevent_cross_site_access: false,
+        }
+    }
+
+    pub fn strict() -> Self {
+        Self::default()
+    }
+
+    pub fn allows_access(
+        &self,
+        requested: &StoragePartitionKey,
+        active: &StoragePartitionKey,
+    ) -> bool {
+        match self.mode {
+            PartitionMode::Disabled => true,
+
+            PartitionMode::PerOrigin => {
+                requested.origin == active.origin
+            }
+
+            PartitionMode::TopLevelSite => {
+                requested.origin == active.origin
+                    && requested.top_level_site
+                        == active.top_level_site
+            }
+
+            PartitionMode::Strict => {
+                requested == active
+            }
+        }
+    }
+}
+
+#[derive(Debug, Default)]
+pub struct StoragePartitionManager {
+    partitions: HashMap<
+        StoragePartitionKey,
+        HashMap<String, Vec<u8>>,
+    >,
+    policy: StoragePartitionPolicy,
+}
+
+impl StoragePartitionManager {
+    pub fn new() -> Self {
+        Self {
+            partitions: HashMap::new(),
+            policy: StoragePartitionPolicy::default(),
+        }
+    }
+
+    pub fn with_policy(policy: StoragePartitionPolicy) -> Self {
+        Self {
+            partitions: HashMap::new(),
+            policy,
+        }
+    }
+
+    pub fn policy(&self) -> &StoragePartitionPolicy {
+        &self.policy
+    }
+
+    pub fn set_policy(
+        &mut self,
+        policy: StoragePartitionPolicy,
+    ) {
+        self.policy = policy;
+    }
+
+    pub fn set(
+        &mut self,
+        partition: &StoragePartitionKey,
+        key: impl Into<String>,
+        value: Vec<u8>,
+    ) {
+        self.partitions
+            .entry(partition.clone())
+            .or_default()
+            .insert(key.into(), value);
+    }
+
+    pub fn get(
+        &self,
+        partition: &StoragePartitionKey,
+        key: &str,
+    ) -> Option<&Vec<u8>> {
+        self.partitions
+            .get(partition)
+            .and_then(|storage| storage.get(key))
+    }
+
+    pub fn remove(
+        &mut self,
+        partition: &StoragePartitionKey,
+        key: &str,
+    ) -> Option<Vec<u8>> {
+        self.partitions
+            .get_mut(partition)
+            .and_then(|storage| storage.remove(key))
+    }
+
+    pub fn clear_partition(
+        &mut self,
+        partition: &StoragePartitionKey,
+    ) {
+        self.partitions.remove(partition);
+    }
+
+    pub fn clear_origin(&mut self, origin: &str) {
+        self.partitions
+            .retain(|partition, _| partition.origin != origin);
+    }
+
+    pub fn clear_top_level_site(
+        &mut self,
+        top_level_site: &str,
+    ) {
+        self.partitions.retain(
+            |partition, _| {
+                partition.top_level_site != top_level_site
+            },
+        );
+    }
+
+    pub fn clear_all(&mut self) {
+        self.partitions.clear();
+    }
+
+    pub fn partition_count(&self) -> usize {
+        self.partitions.len()
+    }
+
+    pub fn can_access(
+        &self,
+        requested: &StoragePartitionKey,
+        active: &StoragePartitionKey,
+    ) -> bool {
+        self.policy.allows_access(requested, active)
+    }
+}
