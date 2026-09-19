@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Nexus Extension Manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "version",
+    "author",
+    "permissions"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "homepage": {
+      "type": "string"
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "background_script": {
+      "type": "string"
+    },
+    "content_scripts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "icons": {
+      "type": "object"
+    },
+    "sandboxed": {
+      "type": "boolean"
+    },
+    "signed": {
+      "type": "boolean"
+    }
+  }
+}
