@@ -40,3 +40,36 @@ pub use network_settings::{
     NetworkSettings,
     ProxyMode,
 };
+pub mod dns_settings;
+pub mod network_lock_ui;
+pub mod engine_selector;
+pub mod workspace_ui;
+pub mod tab_ui;
+
+pub use dns_settings::DnsSettings;
+
+pub use network_lock_ui::{
+    NetworkLockLayer,
+    NetworkLockLayerState,
+    NetworkLockUi,
+    NetworkLockUiState,
+};
+
+pub use engine_selector::{
+    EngineAvailability,
+    EngineCategory,
+    EngineOption,
+    EngineSelector,
+};
+
+pub use workspace_ui::{
+    WorkspaceUi,
+    WorkspaceUiItem,
+    WorkspaceUiState,
+};
+
+pub use tab_ui::{
+    TabUi,
+    TabUiItem,
+    TabUiState,
+};
