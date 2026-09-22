@@ -1,0 +1,107 @@
+# Nexus Browser
+# DNS configuration
+
+[dns]
+enabled = true
+
+mode = "doh"
+
+require_encryption = true
+require_dnssec = true
+
+allow_system_resolver = false
+allow_plaintext_fallback = false
+
+fail_closed = true
+prevent_resolver_bypass = true
+
+cache_enabled = true
+cache_size = 1024
+
+partition_cache = true
+
+selected_resolver = ""
+fallback_resolver = ""
+
+[system]
+enabled = false
+allow_fallback = false
+
+[doh]
+enabled = true
+required = true
+
+resolver = ""
+bootstrap_address = ""
+
+use_http3 = true
+validate_certificates = true
+
+[dot]
+enabled = false
+required = false
+
+resolver = ""
+port = 853
+
+validate_certificates = true
+
+[dnscrypt]
+enabled = false
+required = false
+
+resolver = ""
+server_public_key = ""
+
+[tor]
+enabled = false
+use_tor_dns = false
+socks_address = "127.0.0.1:9050"
+
+[dnssec]
+enabled = true
+required = true
+validate_chain = true
+
+[cache]
+enabled = true
+max_entries = 1024
+
+respect_ttl = true
+serve_stale = false
+
+[partitioning]
+enabled = true
+
+by_top_level_site = true
+by_workspace = true
+by_profile = true
+by_network_route = true
+
+[kill_switch]
+enabled = true
+fail_closed = true
+
+block_system_dns = true
+block_plaintext_dns = true
+block_resolver_bypass = true
+
+block_dns_over_tcp = false
+block_dns_over_udp = false
+
+block_dns_leaks = true
+
+[policy]
+mode = "strict"
+
+allow_doh = true
+allow_dot = true
+allow_dnscrypt = true
+allow_tor_dns = false
+
+allow_system_dns = false
+allow_plaintext_dns = false
+
+require_encryption = true
+require_dnssec = true
+prevent_resolver_bypass = true
