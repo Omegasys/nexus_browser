@@ -1,0 +1,145 @@
+# Nexus Browser
+# Tor Lockdown Profile
+#
+# All browser network traffic must use the Tor backend.
+# Direct and alternate network fallbacks are prohibited.
+
+[profile]
+id = "tor_lockdown"
+name = "Tor Lockdown"
+description = "Routes browser traffic through Tor with fail-closed protections."
+privacy_level = "maximum"
+security_level = "maximum"
+network_mode = "tor"
+
+[general]
+hardware_acceleration = false
+smooth_scrolling = true
+autoplay_media = false
+spell_check = false
+
+[privacy]
+fingerprinting_protection = "maximum"
+tracker_protection = "maximum"
+
+block_third_party_cookies = true
+partition_storage = true
+
+resist_link_tracking = true
+disable_prefetching = true
+disable_speculative_connections = true
+
+clear_data_on_exit = true
+clear_cookies_on_exit = true
+clear_cache_on_exit = true
+clear_site_data_on_exit = true
+
+private_browsing_default = true
+
+[webrtc]
+enabled = false
+allow_local_addresses = false
+allow_public_addresses = false
+proxy_only = true
+block_non_proxy_connections = true
+
+[security]
+sandbox = "maximum"
+site_isolation = true
+process_isolation = true
+microvm_isolation = true
+
+escape_detection = true
+
+network_lock = true
+kill_switch = true
+
+secure_dns_required = true
+block_mixed_content = true
+block_dangerous_downloads = true
+
+extension_sandbox = true
+strict_permissions = true
+
+[permissions]
+deny_unknown_permissions = true
+deny_cross_origin_permissions = true
+
+[network]
+route = "tor"
+
+ipv4_enabled = true
+ipv6_enabled = false
+
+tcp_enabled = true
+udp_enabled = false
+quic_enabled = false
+
+webrtc_enabled = false
+
+network_lock = true
+fail_closed = true
+prevent_direct_fallback = true
+
+[tor]
+enabled = true
+
+socks_address = "127.0.0.1:9050"
+
+allow_direct_fallback = false
+allow_vpn_fallback = false
+allow_proxy_fallback = false
+
+bridges_enabled = false
+
+[network_lock]
+enabled = true
+fail_closed = true
+
+lock_all_traffic = true
+lock_dns = true
+lock_ipv4 = true
+lock_ipv6 = true
+
+lock_direct_connections = true
+lock_proxy_bypass = true
+lock_vpn_bypass = true
+lock_tor_bypass = true
+lock_webrtc = true
+
+[leak_prevention]
+enabled = true
+
+prevent_dns_leaks = true
+prevent_ipv4_leaks = true
+prevent_ipv6_leaks = true
+prevent_webrtc_leaks = true
+
+prevent_proxy_bypass = true
+prevent_vpn_bypass = true
+prevent_tor_bypass = true
+
+[dns]
+enabled = true
+mode = "tor"
+
+require_encryption = true
+require_dnssec = false
+
+allow_system_resolver = false
+allow_plaintext_fallback = false
+
+fail_closed = true
+prevent_resolver_bypass = true
+
+cache_enabled = true
+partition_cache = true
+
+[kill_switch]
+enabled = true
+fail_closed = true
+
+block_system_dns = true
+block_plaintext_dns = true
+block_resolver_bypass = true
+block_dns_leaks = true
