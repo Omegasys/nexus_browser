@@ -1,0 +1,133 @@
+# Nexus Browser
+# Networking configuration
+
+[network]
+route = "direct"
+
+ipv4_enabled = true
+ipv6_enabled = true
+
+tcp_enabled = true
+udp_enabled = true
+quic_enabled = true
+
+webrtc_enabled = true
+
+connection_timeout_seconds = 30
+
+network_lock = true
+fail_closed = true
+prevent_direct_fallback = true
+
+[proxy]
+mode = "disabled"
+address = ""
+username = ""
+password = ""
+
+pac_enabled = false
+pac_url = ""
+
+proxy_dns = true
+proxy_websocket = true
+
+[direct]
+enabled = true
+allow_direct_connections = true
+interface = ""
+
+[protocol_filter]
+enabled = true
+
+allow_ipv4 = true
+allow_ipv6 = true
+
+allow_tcp = true
+allow_udp = true
+allow_quic = true
+
+allow_http = true
+allow_https = true
+allow_http3 = true
+
+allow_websocket = true
+allow_webrtc = true
+
+allow_dns = true
+
+allow_ftp = false
+allow_sftp = true
+allow_ssh = false
+
+allow_torrent = false
+
+[leak_prevention]
+enabled = true
+
+prevent_dns_leaks = true
+prevent_ipv4_leaks = true
+prevent_ipv6_leaks = true
+prevent_webrtc_leaks = true
+
+prevent_proxy_bypass = true
+prevent_vpn_bypass = true
+prevent_tor_bypass = true
+
+[network_lock]
+enabled = true
+fail_closed = true
+
+lock_all_traffic = true
+lock_dns = true
+lock_ipv4 = true
+lock_ipv6 = true
+
+lock_direct_connections = true
+lock_proxy_bypass = true
+lock_vpn_bypass = true
+lock_tor_bypass = true
+lock_webrtc = true
+
+[vpn]
+enabled = false
+interface = ""
+allow_direct_fallback = false
+
+[tor]
+enabled = false
+socks_address = "127.0.0.1:9050"
+allow_direct_fallback = false
+bridges_enabled = false
+
+[i2p]
+enabled = false
+proxy_address = "127.0.0.1:4444"
+
+[nym]
+enabled = false
+gateway_address = ""
+
+[lokinet]
+enabled = false
+router_address = ""
+
+[yggdrasil]
+enabled = false
+interface = ""
+
+[ipfs]
+enabled = false
+
+[freenet]
+enabled = false
+
+[gnunet]
+enabled = false
+
+[hyphanet]
+enabled = false
+
+[torrent]
+enabled = false
+isolated_network = true
+direct_network_only = true
