@@ -1,0 +1,90 @@
+# Nexus Browser
+# Security configuration
+
+[security]
+sandbox = "strict"
+certificate_validation = "strict"
+content_security_policy = "enforce"
+
+site_isolation = true
+process_isolation = true
+microvm_isolation = true
+
+escape_detection = true
+
+network_lock = true
+kill_switch = true
+
+secure_dns_required = true
+
+block_mixed_content = true
+block_dangerous_downloads = true
+
+extension_sandbox = true
+strict_permissions = true
+
+[isolation]
+tab_isolation = true
+tab_group_isolation = true
+workspace_isolation = true
+profile_isolation = true
+identity_isolation = true
+
+storage_isolation = true
+cookie_isolation = true
+cache_isolation = true
+indexeddb_isolation = true
+
+network_isolation = true
+dns_isolation = true
+
+[permissions]
+ask_for_camera = true
+ask_for_microphone = true
+ask_for_location = true
+ask_for_notifications = true
+ask_for_clipboard = true
+
+deny_unknown_permissions = true
+deny_cross_origin_permissions = true
+
+[downloads]
+block_dangerous_files = true
+block_executable_downloads = false
+scan_downloads = true
+ask_before_download = true
+
+[extensions]
+sandbox_extensions = true
+require_permissions = true
+require_signed_extensions = false
+isolate_native_messaging = true
+
+[certificates]
+validate_certificates = true
+reject_expired_certificates = true
+reject_invalid_certificates = true
+reject_hostname_mismatch = true
+allow_user_certificates = true
+
+[content_security_policy]
+enabled = true
+mode = "enforce"
+allow_report_only = true
+
+[microvm]
+enabled = true
+renderer_isolation = true
+javascript_isolation = true
+network_isolation = true
+dns_isolation = true
+storage_isolation = true
+gpu_isolation = true
+
+[escape_prevention]
+enabled = true
+monitor_process_boundaries = true
+monitor_filesystem_access = true
+monitor_network_access = true
+quarantine_on_violation = true
+terminate_on_confirmed_escape = true
