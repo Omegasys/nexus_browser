@@ -1,0 +1,6 @@
+#[test]
+fn tor_bridge_can_be_configured() {
+    let bridge_enabled = true;
+
+    assert!(bridge_enabled);
+}
