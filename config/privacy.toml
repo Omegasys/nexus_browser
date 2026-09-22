@@ -1,0 +1,56 @@
+# Nexus Browser
+# Privacy configuration
+
+[privacy]
+fingerprinting_protection = "strict"
+tracker_protection = "strict"
+webrtc_protection = "block_non_proxy"
+
+block_third_party_cookies = true
+partition_storage = true
+
+clear_data_on_exit = false
+clear_cookies_on_exit = false
+clear_cache_on_exit = false
+clear_site_data_on_exit = false
+
+private_browsing_default = false
+
+resist_link_tracking = true
+disable_prefetching = true
+disable_speculative_connections = true
+
+[storage]
+partition_by_top_level_site = true
+partition_cookies = true
+partition_cache = true
+partition_indexeddb = true
+partition_local_storage = true
+partition_session_storage = true
+partition_cache_storage = true
+partition_service_workers = true
+partition_shared_workers = true
+
+[tracking]
+block_known_trackers = true
+block_cross_site_tracking = true
+block_third_party_tracking = true
+block_tracking_pixels = true
+block_known_fingerprinting_resources = true
+
+[telemetry]
+enabled = false
+anonymous_telemetry = false
+diagnostics_upload = false
+
+[link_tracking]
+strip_tracking_parameters = true
+strip_known_advertising_parameters = true
+preserve_functional_parameters = true
+
+[webrtc]
+enabled = true
+allow_local_addresses = false
+allow_public_addresses = false
+proxy_only = true
+block_non_proxy_connections = true
