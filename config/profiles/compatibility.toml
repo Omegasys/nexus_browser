@@ -1,0 +1,99 @@
+# Nexus Browser
+# Compatibility Profile
+#
+# Intended for websites and applications that require
+# broader browser compatibility.
+
+[profile]
+id = "compatibility"
+name = "Compatibility"
+description = "Prioritizes website and application compatibility."
+privacy_level = "standard"
+security_level = "standard"
+
+[general]
+hardware_acceleration = true
+smooth_scrolling = true
+autoplay_media = true
+spell_check = true
+
+[privacy]
+fingerprinting_protection = "standard"
+tracker_protection = "standard"
+
+block_third_party_cookies = false
+partition_storage = true
+
+resist_link_tracking = false
+disable_prefetching = false
+disable_speculative_connections = false
+
+[webrtc]
+enabled = true
+allow_local_addresses = true
+allow_public_addresses = true
+proxy_only = false
+block_non_proxy_connections = false
+
+[storage]
+partition_cookies = true
+partition_cache = true
+partition_indexeddb = true
+partition_local_storage = true
+partition_session_storage = true
+partition_cache_storage = true
+partition_service_workers = true
+
+[security]
+sandbox = "standard"
+site_isolation = true
+process_isolation = true
+microvm_isolation = false
+
+escape_detection = true
+network_lock = false
+kill_switch = false
+
+secure_dns_required = false
+block_mixed_content = true
+block_dangerous_downloads = true
+
+extension_sandbox = true
+strict_permissions = false
+
+[permissions]
+deny_unknown_permissions = false
+deny_cross_origin_permissions = false
+
+[network]
+route = "direct"
+
+ipv4_enabled = true
+ipv6_enabled = true
+
+tcp_enabled = true
+udp_enabled = true
+quic_enabled = true
+webrtc_enabled = true
+
+network_lock = false
+fail_closed = false
+prevent_direct_fallback = false
+
+[proxy]
+mode = "disabled"
+
+[dns]
+enabled = true
+mode = "doh"
+
+require_encryption = false
+require_dnssec = false
+allow_system_resolver = true
+allow_plaintext_fallback = true
+
+fail_closed = false
+prevent_resolver_bypass = false
+
+cache_enabled = true
+partition_cache = true
