@@ -1,0 +1,57 @@
+# Nexus Browser
+# Default configuration
+#
+# This file provides the baseline configuration.
+# More specialized configuration files can override these values.
+
+[general]
+homepage = "about:blank"
+search_engine = "default"
+
+restore_previous_session = false
+open_new_tabs_with_homepage = false
+
+downloads_directory = "Downloads"
+ask_before_download = true
+
+language = "en-US"
+spell_check = true
+
+hardware_acceleration = true
+smooth_scrolling = true
+autoplay_media = false
+
+[ui]
+fullscreen = false
+compact_mode = false
+
+show_navigation_bar = true
+show_tab_bar = true
+show_sidebar = false
+show_status_bar = false
+
+show_tab_groups = true
+show_close_buttons = true
+allow_tab_reordering = true
+allow_tab_dragging = true
+
+[workspaces]
+enabled = true
+remember_last_workspace = true
+allow_workspace_switching = true
+
+[extensions]
+enabled = true
+allow_runtime_extensions = true
+
+[updates]
+enabled = true
+automatic_engine_updates = false
+automatic_browser_updates = true
+
+[logging]
+enabled = true
+level = "info"
+
+[developer_tools]
+enabled = true
