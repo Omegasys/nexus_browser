@@ -1,0 +1,135 @@
+# Nexus Browser
+# Privacy Profile
+#
+# Intended for users who want substantially stronger
+# privacy protections while retaining normal browsing.
+
+[profile]
+id = "privacy"
+name = "Privacy"
+description = "Provides strong privacy and anti-tracking protections."
+privacy_level = "high"
+security_level = "high"
+
+[general]
+hardware_acceleration = true
+smooth_scrolling = true
+autoplay_media = false
+spell_check = true
+
+[privacy]
+fingerprinting_protection = "strict"
+tracker_protection = "maximum"
+
+block_third_party_cookies = true
+partition_storage = true
+
+resist_link_tracking = true
+disable_prefetching = true
+disable_speculative_connections = true
+
+clear_data_on_exit = false
+clear_cookies_on_exit = false
+clear_cache_on_exit = false
+
+[webrtc]
+enabled = true
+allow_local_addresses = false
+allow_public_addresses = false
+proxy_only = true
+block_non_proxy_connections = true
+
+[storage]
+partition_cookies = true
+partition_cache = true
+partition_indexeddb = true
+partition_local_storage = true
+partition_session_storage = true
+partition_cache_storage = true
+partition_service_workers = true
+partition_shared_workers = true
+
+[tracking]
+block_known_trackers = true
+block_cross_site_tracking = true
+block_third_party_tracking = true
+block_tracking_pixels = true
+block_known_fingerprinting_resources = true
+
+[link_tracking]
+strip_tracking_parameters = true
+strip_known_advertising_parameters = true
+preserve_functional_parameters = true
+
+[telemetry]
+enabled = false
+anonymous_telemetry = false
+diagnostics_upload = false
+
+[security]
+sandbox = "strict"
+site_isolation = true
+process_isolation = true
+microvm_isolation = true
+
+escape_detection = true
+network_lock = true
+kill_switch = true
+
+secure_dns_required = true
+block_mixed_content = true
+block_dangerous_downloads = true
+
+extension_sandbox = true
+strict_permissions = true
+
+[permissions]
+deny_unknown_permissions = true
+deny_cross_origin_permissions = true
+
+[network]
+route = "direct"
+
+ipv4_enabled = true
+ipv6_enabled = true
+
+tcp_enabled = true
+udp_enabled = true
+quic_enabled = true
+
+webrtc_enabled = true
+
+network_lock = true
+fail_closed = true
+prevent_direct_fallback = true
+
+[proxy]
+mode = "disabled"
+
+[leak_prevention]
+enabled = true
+
+prevent_dns_leaks = true
+prevent_ipv4_leaks = true
+prevent_ipv6_leaks = true
+prevent_webrtc_leaks = true
+
+prevent_proxy_bypass = true
+prevent_vpn_bypass = true
+prevent_tor_bypass = true
+
+[dns]
+enabled = true
+mode = "doh"
+
+require_encryption = true
+require_dnssec = true
+
+allow_system_resolver = false
+allow_plaintext_fallback = false
+
+fail_closed = true
+prevent_resolver_bypass = true
+
+cache_enabled = true
+partition_cache = true
