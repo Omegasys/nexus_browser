@@ -1,0 +1,99 @@
+# Nexus Browser
+# Balanced Profile
+#
+# General-purpose profile balancing compatibility,
+# privacy, and security.
+
+[profile]
+id = "balanced"
+name = "Balanced"
+description = "Balances compatibility, privacy, and security."
+privacy_level = "balanced"
+security_level = "balanced"
+
+[general]
+hardware_acceleration = true
+smooth_scrolling = true
+autoplay_media = false
+spell_check = true
+
+[privacy]
+fingerprinting_protection = "standard"
+tracker_protection = "strict"
+
+block_third_party_cookies = true
+partition_storage = true
+
+resist_link_tracking = true
+disable_prefetching = true
+disable_speculative_connections = true
+
+[webrtc]
+enabled = true
+allow_local_addresses = false
+allow_public_addresses = true
+proxy_only = false
+block_non_proxy_connections = true
+
+[storage]
+partition_cookies = true
+partition_cache = true
+partition_indexeddb = true
+partition_local_storage = true
+partition_session_storage = true
+partition_cache_storage = true
+partition_service_workers = true
+
+[security]
+sandbox = "strict"
+site_isolation = true
+process_isolation = true
+microvm_isolation = true
+
+escape_detection = true
+network_lock = true
+kill_switch = true
+
+secure_dns_required = true
+block_mixed_content = true
+block_dangerous_downloads = true
+
+extension_sandbox = true
+strict_permissions = true
+
+[permissions]
+deny_unknown_permissions = true
+deny_cross_origin_permissions = true
+
+[network]
+route = "direct"
+
+ipv4_enabled = true
+ipv6_enabled = true
+
+tcp_enabled = true
+udp_enabled = true
+quic_enabled = true
+webrtc_enabled = true
+
+network_lock = true
+fail_closed = true
+prevent_direct_fallback = true
+
+[proxy]
+mode = "disabled"
+
+[dns]
+enabled = true
+mode = "doh"
+
+require_encryption = true
+require_dnssec = true
+allow_system_resolver = false
+allow_plaintext_fallback = false
+
+fail_closed = true
+prevent_resolver_bypass = true
+
+cache_enabled = true
+partition_cache = true
