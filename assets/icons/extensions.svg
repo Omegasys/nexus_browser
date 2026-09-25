@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <path d="M48 48H112V80
+          C112 94 123 104 136 104
+         C149 104 160 94 160 80
+         V48H208V96H184
+         C170 96 160 107 160 120
+         C160 133 170 144 184 144
+         H208V208H144V184
+         C144 170 133 160 120 160
+         C107 160 96 170 96 184
+         V208H48V160H72
+         C86 160 96 149 96 136
+         C96 123 86 112 72 112
+         H48V48Z"
+        stroke="currentColor"
+        stroke-width="12"
+        stroke-linejoin="round"/>
+
+</svg>
