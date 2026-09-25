@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+APPDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+export PATH="$APPDIR/usr/bin:$PATH"
+export LD_LIBRARY_PATH="$APPDIR/usr/lib:${LD_LIBRARY_PATH:-}"
+
+export XDG_DATA_DIRS="$APPDIR/usr/share:${XDG_DATA_DIRS:-/usr/share}"
+export XDG_CONFIG_DIRS="$APPDIR/usr/etc:${XDG_CONFIG_DIRS:-/etc/xdg}"
+
+exec "$APPDIR/usr/bin/nexus-browser" "$@"
