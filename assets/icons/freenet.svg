@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <circle cx="128" cy="128" r="88"
+          stroke="currentColor"
+          stroke-width="12"/>
+
+  <circle cx="128" cy="128" r="14"
+          fill="currentColor"/>
+
+  <circle cx="76" cy="84" r="12"
+          stroke="currentColor"
+          stroke-width="10"/>
+
+  <circle cx="184" cy="84" r="12"
+          stroke="currentColor"
+          stroke-width="10"/>
+
+  <circle cx="76" cy="172" r="12"
+          stroke="currentColor"
+          stroke-width="10"/>
+
+  <circle cx="184" cy="172" r="12"
+          stroke="currentColor"
+          stroke-width="10"/>
+
+  <path d="M88 91L116 116M168 91L140 116M88 165L116 140M168 165L140 140"
+        stroke="currentColor"
+        stroke-width="8"
+        stroke-linecap="round"/>
+
+</svg>
