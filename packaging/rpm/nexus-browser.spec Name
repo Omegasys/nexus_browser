@@ -1,0 +1,30 @@
+Name:           nexus-browser
+Version:        0.1.0
+Release:        1%{?dist}
+Summary:        Modular privacy and security focused web browser
+
+License:        GPL-3.0-or-later
+URL:            https://github.com/nexus-browser/nexus-browser
+
+Requires:       glibc
+
+%description
+Nexus Browser is a modular web browser designed around privacy,
+security, engine modularity, isolation, and user-controlled networking.
+
+%prep
+
+%build
+
+%install
+mkdir -p %{buildroot}%{_bindir}
+
+install -m 0755 %{_topdir}/BUILD/nexus-browser \
+    %{buildroot}%{_bindir}/nexus-browser
+
+%files
+%{_bindir}/nexus-browser
+
+%changelog
+* Thu Sep 24 2026 Nexus Browser Project
+- Initial RPM package
