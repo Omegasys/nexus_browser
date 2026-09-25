@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     fill="currentColor">
+
+  <path fill-rule="evenodd"
+        d="M256 28C130.1 28 28 130.1 28 256S130.1 484 256 484
+           S484 381.9 484 256S381.9 28 256 28ZM256 84
+           C351 84 428 161 428 256S351 428 256 428
+           S84 351 84 256S161 84 256 84Z"/>
+
+  <path d="M256 84V428H276V84H256Z"/>
+  <path d="M84 246H428V266H84V246Z"/>
+
+  <circle cx="256" cy="256" r="34"/>
+
+</svg>
