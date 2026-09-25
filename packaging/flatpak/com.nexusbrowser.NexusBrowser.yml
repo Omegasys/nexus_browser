@@ -1,0 +1,39 @@
+app-id: com.nexusbrowser.NexusBrowser
+runtime: org.freedesktop.Platform
+runtime-version: "25.08"
+sdk: org.freedesktop.Sdk
+
+command: nexus-browser
+
+finish-args:
+  - --share=network
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=dri
+  - --filesystem=home
+  - --talk-name=org.freedesktop.portal.Desktop
+  - --talk-name=org.freedesktop.portal.FileChooser
+  - --talk-name=org.freedesktop.portal.OpenURI
+
+modules:
+  - name: nexus-browser
+    buildsystem: simple
+
+    build-commands:
+      - install -Dm755 nexus-browser /app/bin/nexus-browser
+      - install -Dm644 com.nexusbrowser.NexusBrowser.desktop
+        /app/share/applications/com.nexusbrowser.NexusBrowser.desktop
+      - install -Dm644 com.nexusbrowser.NexusBrowser.appdata.xml
+        /app/share/metainfo/com.nexusbrowser.NexusBrowser.appdata.xml
+
+    sources:
+      - type: file
+        path: ../../target/release/nexus-browser
+
+      - type: file
+        path: com.nexusbrowser.NexusBrowser.desktop
+
+      - type: file
+        path: com.nexusbrowser.NexusBrowser.appdata.xml
