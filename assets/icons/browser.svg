@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <circle cx="128" cy="128" r="96"
+          stroke="currentColor"
+          stroke-width="16"/>
+
+  <circle cx="128" cy="128" r="56"
+          stroke="currentColor"
+          stroke-width="12"/>
+
+  <path d="M128 32V224"
+        stroke="currentColor"
+        stroke-width="10"
+        stroke-linecap="round"/>
+
+  <path d="M32 128H224"
+        stroke="currentColor"
+        stroke-width="10"
+        stroke-linecap="round"/>
+
+</svg>
