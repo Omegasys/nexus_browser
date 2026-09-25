@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <path d="M208 128
+          C208 172 172 208 128 208
+          C84 208 48 172 48 128
+          C48 84 84 48 128 48
+          C157 48 182 63 198 86"
+        stroke="currentColor"
+        stroke-width="16"
+        stroke-linecap="round"/>
+
+  <path d="M192 48V96H144"
+        stroke="currentColor"
+        stroke-width="16"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+</svg>
