@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <path d="M128 32V160"
+        stroke="currentColor"
+        stroke-width="16"
+        stroke-linecap="round"/>
+
+  <path d="M80 112L128 160L176 112"
+        stroke="currentColor"
+        stroke-width="16"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <path d="M48 192H208"
+        stroke="currentColor"
+        stroke-width="16"
+        stroke-linecap="round"/>
+
+</svg>
