@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 800 600"
+     fill="none">
+
+  <rect x="24" y="24"
+        width="752"
+        height="552"
+        rx="24"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+  <rect x="284" y="110"
+        width="232"
+        height="232"
+        rx="36"
+        stroke="currentColor"
+        stroke-width="12"/>
+
+  <rect x="340" y="166"
+        width="120"
+        height="120"
+        rx="18"
+        stroke="currentColor"
+        stroke-width="10"/>
+
+  <path d="M400 76V110
+          M400 342V376
+         M250 226H284
+         M516 226H550"
+        stroke="currentColor"
+        stroke-width="12"
+        stroke-linecap="round"/>
+
+  <path d="M96 416H704"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+  <path d="M96 464H620"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+  <path d="M96 512H680"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+</svg>
