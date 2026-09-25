@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <rect x="64" y="64"
+        width="128"
+        height="128"
+        rx="24"
+        stroke="currentColor"
+        stroke-width="14"/>
+
+  <path d="M96 40V64
+          M160 40V64
+         M96 192V216
+         M160 192V216
+         M40 96H64
+         M40 160H64
+         M192 96H216
+         M192 160H216"
+        stroke="currentColor"
+        stroke-width="14"
+        stroke-linecap="round"/>
+
+  <path d="M104 104H152V152H104V104Z"
+        stroke="currentColor"
+        stroke-width="10"/>
+
+</svg>
