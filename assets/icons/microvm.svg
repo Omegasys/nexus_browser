@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <rect x="40" y="56"
+        width="176"
+        height="144"
+        rx="20"
+        stroke="currentColor"
+        stroke-width="14"/>
+
+  <path d="M40 96H216"
+        stroke="currentColor"
+        stroke-width="14"/>
+
+  <rect x="72" y="120"
+        width="112"
+        height="48"
+        rx="8"
+        stroke="currentColor"
+        stroke-width="10"/>
+
+  <path d="M88 144H168"
+        stroke="currentColor"
+        stroke-width="8"
+        stroke-linecap="round"/>
+
+</svg>
