@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 800 600"
+     fill="none">
+
+  <rect x="24" y="24"
+        width="752"
+        height="552"
+        rx="24"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+  <path d="M400 68
+          L504 108
+         V190
+         C504 264 460 320 400 348
+         C340 320 296 264 296 190V108L400 68Z"
+        stroke="currentColor"
+        stroke-width="12"/>
+
+  <rect x="356" y="176"
+        width="88"
+        height="76"
+        rx="12"
+        stroke="currentColor"
+        stroke-width="10"/>
+
+  <path d="M374 176V152
+          C374 138 386 126 400 126
+         C414 126 426 138 426 152V176"
+        stroke="currentColor"
+        stroke-width="10"/>
+
+  <path d="M96 416H704"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+  <path d="M96 464H620"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+  <path d="M96 512H520"
+        stroke="currentColor"
+        stroke-width="8"/>
+
+</svg>
