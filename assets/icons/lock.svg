@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <rect x="56" y="112"
+        width="144"
+        height="104"
+        rx="16"
+        stroke="currentColor"
+        stroke-width="14"/>
+
+  <path d="M80 112V80
+          C80 53 101 32 128 32
+         C155 32 176 53 176 80V112"
+        stroke="currentColor"
+        stroke-width="14"
+        stroke-linecap="round"/>
+
+  <circle cx="128" cy="160" r="10"
+          fill="currentColor"/>
+
+</svg>
