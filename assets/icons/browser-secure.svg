@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 256 256"
+     fill="none">
+
+  <circle cx="128" cy="116" r="78"
+          stroke="currentColor"
+          stroke-width="14"/>
+
+  <path d="M128 38V194"
+        stroke="currentColor"
+        stroke-width="9"
+        stroke-linecap="round"/>
+
+  <path d="M50 116H206"
+        stroke="currentColor"
+        stroke-width="9"
+        stroke-linecap="round"/>
+
+  <path d="M76 194L128 232L180 194"
+        stroke="currentColor"
+        stroke-width="14"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+  <path d="M103 192L119 208L153 174"
+        stroke="currentColor"
+        stroke-width="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+
+</svg>
