@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 900 240"
+     fill="none">
+
+  <g transform="translate(20 20)">
+    <circle cx="100" cy="100" r="88"
+            stroke="currentColor"
+            stroke-width="14"/>
+
+    <circle cx="100" cy="100" r="54"
+            stroke="currentColor"
+            stroke-width="10"/>
+
+    <path d="M100 12V188"
+          stroke="currentColor"
+          stroke-width="9"
+          stroke-linecap="round"/>
+
+    <path d="M12 100H188"
+          stroke="currentColor"
+          stroke-width="9"
+          stroke-linecap="round"/>
+
+    <circle cx="100" cy="100" r="16"
+            fill="currentColor"/>
+  </g>
+
+  <path d="M252 75H285L315 125L345 75H378L330 150H300L252 75Z"
+        fill="currentColor"/>
+
+  <text x="400"
+        y="143"
+        fill="currentColor"
+        font-family="sans-serif"
+        font-size="82"
+        font-weight="600"
+        letter-spacing="2">
+    Nexus
+  </text>
+
+</svg>
