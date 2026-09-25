@@ -1,0 +1,27 @@
+pkgname=nexus-browser
+pkgver=0.1.0
+pkgrel=1
+
+pkgdesc="Modular privacy and security focused web browser"
+arch=('x86_64')
+
+url="https://github.com/nexus-browser/nexus-browser"
+license=('GPL-3.0-or-later')
+
+depends=('glibc')
+
+source=()
+
+build() {
+    cd "${srcdir}"
+
+    install -Dm755 \
+        "${startdir}/../../target/release/nexus-browser" \
+        "${pkgdir}/usr/bin/nexus-browser"
+}
+
+package() {
+    install -Dm755 \
+        "${srcdir}/nexus-browser" \
+        "${pkgdir}/usr/bin/nexus-browser"
+}
