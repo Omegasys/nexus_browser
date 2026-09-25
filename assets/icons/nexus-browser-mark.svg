@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     fill="none">
+
+  <circle cx="256" cy="256" r="204"
+          stroke="currentColor"
+          stroke-width="28"/>
+
+  <path d="M120 256
+          C120 181 181 120 256 120
+         C331 120 392 181 392 256
+         C392 331 331 392 256 392
+         C181 392 120 331 120 256Z"
+        stroke="currentColor"
+        stroke-width="20"/>
+
+  <path d="M256 52V460"
+        stroke="currentColor"
+        stroke-width="18"
+        stroke-linecap="round"/>
+
+  <path d="M52 256H460"
+        stroke="currentColor"
+        stroke-width="18"
+        stroke-linecap="round"/>
+
+  <circle cx="256" cy="256" r="32"
+          fill="currentColor"/>
+
+</svg>
