@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Nexus Browser
+Comment=Modular privacy and security focused web browser
+Exec=nexus-browser %U
+Icon=nexus-browser
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;Security;
+MimeType=text/html;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
