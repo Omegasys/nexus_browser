@@ -1,0 +1,10 @@
+Package: nexus-browser
+Version: 0.1.0
+Section: web
+Priority: optional
+Architecture: amd64
+Maintainer: Nexus Browser Project
+Description: Modular privacy and security focused web browser
+ Nexus Browser is a modular web browser designed around privacy,
+ security, engine modularity, isolation, and user-controlled networking.
+Depends: libc6
