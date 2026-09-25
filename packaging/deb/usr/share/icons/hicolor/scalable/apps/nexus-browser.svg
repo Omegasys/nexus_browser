@@ -1,0 +1,17 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <title>Nexus Browser</title>
+
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="none" stroke="currentColor" stroke-width="16"></rect>
+
+  <path d="M72 128
+           C72 94 94 72 128 72
+           C162 72 184 94 184 128
+           C184 162 162 184 128 184
+           C94 184 72 162 72 128Z" fill="none" stroke="currentColor" stroke-width="12"></path>
+
+  <path d="M128 72
+           L128 184
+           M72 128
+           L184 128" fill="none" stroke="currentColor" stroke-width="10"></path>
+</svg>
