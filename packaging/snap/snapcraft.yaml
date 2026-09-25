@@ -1,0 +1,39 @@
+name: nexus-browser
+
+base: core24
+version: "0.1.0"
+summary: Modular privacy and security focused web browser
+description: |
+  Nexus Browser is a modular web browser designed around privacy,
+  security, engine modularity, isolation, and user-controlled networking.
+
+grade: devel
+confinement: strict
+
+apps:
+  nexus-browser:
+    command: usr/bin/nexus-browser
+
+    plugs:
+      - network
+      - network-bind
+      - home
+      - desktop
+      - desktop-legacy
+      - wayland
+      - x11
+      - opengl
+      - audio-playback
+      - removable-media
+
+parts:
+  nexus-browser:
+    plugin: dump
+
+    source: ../../target/release
+
+    organize:
+      nexus-browser: usr/bin/nexus-browser
+
+    stage:
+      - usr/bin/nexus-browser
